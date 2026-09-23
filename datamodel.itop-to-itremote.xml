@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.2">
+  <classes>
+    <class id="OSVersion" _delta="if_exists">
+      <fields>
+        <field id="itremote_managed" xsi:type="AttributeEnum" _delta="define">
+        <sql>itremote_managed</sql>
+        <values>
+          <value>yes</value>
+          <value>no</value>
+        </values>
+        <default_value>no</default_value>
+        <is_null_allowed>false</is_null_allowed>
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="itremote_managed" _delta="define">
+              <rank>26</rank>
+            </item>
+          </items>
+        </details>
+      </presentation>
+    </class>
+  </classes>
+</itop_design>

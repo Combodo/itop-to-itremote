@@ -1,0 +1,16 @@
+{
+  "config": {
+    "classmap-authoritative": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Combodo\\iTop\\Extension\\ITRemote\\": "src"
+    }
+  },
+  "name": "combodo/itop-to-itremote",
+  "type": "itop-extension",
+  "description": "Device control via IT Remote",
+  "require": {
+    "composer-runtime-api": "^2.0"
+  }
+}
