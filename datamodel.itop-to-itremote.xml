@@ -4,13 +4,15 @@
     <class id="OSVersion" _delta="if_exists">
       <fields>
         <field id="itremote_managed" xsi:type="AttributeEnum" _delta="define">
-        <sql>itremote_managed</sql>
-        <values>
-          <value>yes</value>
-          <value>no</value>
-        </values>
-        <default_value>no</default_value>
-        <is_null_allowed>false</is_null_allowed>
+          <sql>itremote_managed</sql>
+          <values>
+            <value><code>yes</code></value>
+            <value><code>no</code></value>
+          </values>
+          <default_value>no</default_value>
+          <is_null_allowed>false</is_null_allowed>
+          <display_style>radio_horizontal</display_style>
+        </field>
       </fields>
       <presentation>
         <details>

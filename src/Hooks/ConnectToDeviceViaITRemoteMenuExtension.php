@@ -1,15 +1,15 @@
 <?php
 namespace Combodo\iTop\Extension\ITRemote\Hooks;
 
-use Exception;
-use iPopupMenuExtension;
-use MetaModel;
-use Dict;
-use URLPopupMenuItem;
 use DBObject;
 use DBObjectSearch;
 use DBObjectSet;
+use Dict;
+use Exception;
+use iPopupMenuExtension;
 use IssueLog;
+use MetaModel;
+use URLPopupMenuItem;
 
 class ConnectToDeviceViaITRemoteMenuExtension implements iPopupMenuExtension
 {
@@ -28,7 +28,7 @@ class ConnectToDeviceViaITRemoteMenuExtension implements iPopupMenuExtension
         {
             case iPopupMenuExtension::MENU_OBJDETAILS_ACTIONS:
                 // In this case $param is a DBObject
-                $aResult = array();
+                $aResult = [];
                 $oObj = $param;
 
                 // Applies only on allowed classes
@@ -58,7 +58,7 @@ class ConnectToDeviceViaITRemoteMenuExtension implements iPopupMenuExtension
 
             default:
                 // Unknown type of menu, do nothing
-                $aResult = array();
+                $aResult = [];
                 break;
         }
         return $aResult;
@@ -81,6 +81,9 @@ class ConnectToDeviceViaITRemoteMenuExtension implements iPopupMenuExtension
                 $sScope = $aClassConfig['scope'];
                 // Parsing the query validates its syntax and consistency with the data model.
                 $oScope = DBObjectSearch::FromOQL($sScope);
+                if (!is_object($oScope)) {
+                    throw new Exception("The scope for class '$sClass' is not valid. It must be an OQL query returning objects of that exact class");
+                }
                 // Check that the OQL search for a class which is equal to $sClass
                 if ($oScope->GetClass() !== $sClass) {
                     throw new Exception("The scope query for class '$sClass' is not valid. The scope query must return objects of that exact class");
@@ -98,6 +101,7 @@ class ConnectToDeviceViaITRemoteMenuExtension implements iPopupMenuExtension
                 'obj_class' => $sClass,
                 'scope' => isset($aClassConfig['scope']) ? $aClassConfig['scope'] : '',
                 'obj_name' => $oObj->GetName(),
+                'message' => $e->getMessage(),
             ]);
             return false;
         }
