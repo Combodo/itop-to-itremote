@@ -14,8 +14,8 @@ Dict::Add('FR FR', 'French', 'Français', array(
     'Class:OSVersion /Attribute:itremote_managed/Value:no+' => 'Cette version d\'OS n\'est pas gérable par IT Remote',
     'Class:OSVersion /Attribute:itremote_managed/Value:yes' => 'Oui',
     'Class:OSVersion /Attribute:itremote_managed/Value:yes+' => 'Cette version d\'OS est gérable par IT Remote',
-    'Menu:ConnectToITRemote' => 'Se connecter à l\'appareil',
-    'Menu:ConnectToITRemote+' => 'Ouvrir un nouvel onglet pour se connecter à l\'appareil via IT Remote',
+    'Menu:ConnectToITRemote' => 'Prendre la main à distance',
+    'Menu:ConnectToITRemote+' => 'Ouvrir un nouvel onglet pour prendre la main à distance sur cet équipement via IT Remote',
 ));
 
 

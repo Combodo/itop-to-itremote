@@ -14,8 +14,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:OSVersion/Attribute:itremote_managed/Value:no+' => 'This OS version is not manageable by IT Remote',
     'Class:OSVersion/Attribute:itremote_managed/Value:yes' => 'Yes',
     'Class:OSVersion/Attribute:itremote_managed/Value:yes+' => 'This OS version is manageable by IT Remote',
-    'Menu:ConnectToITRemote' => 'Connect to the device',
-    'Menu:ConnectToITRemote+' => 'Open a new tab to connect to the device via IT Remote',
+    'Menu:ConnectToITRemote' => 'Remote control',
+    'Menu:ConnectToITRemote+' => 'Open a new tab to take control of the device via IT Remote',
 ));
 
 
