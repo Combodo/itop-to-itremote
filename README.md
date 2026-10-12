@@ -4,7 +4,7 @@
 
 This is the module used in the "IT Remote Device control" extension for [iTop](https://github.com/Combodo/iTop).
 
-This extension propose an integration with the [IT Remotel](https://itremote.com/) solution.
+This extension propose an integration with the [IT Remote](https://itremote.com/) solution.
 It allows to connect and control remote devices (like personal computers and servers) from iTop in a single click. 
 
 ## Download
